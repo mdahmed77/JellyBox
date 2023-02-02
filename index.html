@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles/custom.css">
+</head>
+
+<body>
+
+    <div class="scene">
+        <div class="floor"></div>
+        <div class="cube color1">
+            <div class="front"></div>
+            <div class="back"></div>
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="top">
+                <div class="ballShadow"></div>
+            </div>
+            <div class="bottom"></div>
+        </div>
+        <div class="ball"></div>
+    </div>
+
+    <script></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        var counter = 1;
+        var intervalId = window.setInterval(function () {
+            console.log('Hit');
+            hitIt();
+        }, 1450);
+
+        function hitIt() {
+            $(".cube").removeClass("color" + counter);
+            if (counter >= 6) {
+                counter = 0;
+            }
+            counter++;
+            $(".cube").addClass("color" + counter);
+        }
+    </script>
+</body>
+
+</html>
